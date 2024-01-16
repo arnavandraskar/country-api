@@ -14,10 +14,9 @@ Welcome to the Country API service! This backend service provides information ab
     - [`/auth`](#auth-endpoint)
     - [`/country/name`](#countryname-endpoint)
     - [`/countries`](#countries-endpoint)
-4. [Filters and Sorting](#filters-and-sorting)
-5. [Error Handling](#error-handling)
-6. [Run the Service](#run-the-service)
-7. [Testing with cURL](#testing-with-curl)
+4. [Error Handling](#error-handling)
+5. [Run the Service](#run-the-service)
+6. [Testing with cURL](#testing-with-curl)
 
 
 ## Getting Started
@@ -115,6 +114,8 @@ python app.py
 Here are some cURL commands to test the API endpoints:
 
 ### Generate API Token:
+Please note that to avoid using a database as of now, username and password are included in the code itself. Use username = "your_username" and password = "your_password" as it is.
+
 ```bash
 curl -X POST "http://localhost:5000/auth" -H "Content-Type: application/json" -d '{"username": "your_username", "password": "your_password"}'
 ```
