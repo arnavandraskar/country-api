@@ -64,7 +64,7 @@ def generate_auth_token():
 
 
 # Protected API endpoint to fetch detailed information about a specific country
-@app.route('/country/name', methods=['GET'])
+@app.route('/country', methods=['GET'])
 @authenticate
 def get_country_info():
     try:
@@ -93,7 +93,7 @@ def get_country_info():
 
 
 # Protected API endpoint to retrieve a list of countries based on filters and sorting
-@app.route('/countries', methods=['GET'])
+@app.route('/countries_list', methods=['GET'])
 @authenticate
 def get_countries_list():
     try:
