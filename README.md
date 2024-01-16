@@ -69,7 +69,7 @@ To access protected endpoints, you need to generate an API token. Now for demons
 Include the generated API token in the Authorization parameter when making requests to protected endpoints.
 
 ```bash
-curl -X GET "http://localhost:5000/country?name=CountryName" -H "Authorization: your_generated_token"
+curl -X GET "http://localhost:5000/country?name=India" -H "Authorization: your_generated_token"
 ```
 
 ## Endpoints
@@ -117,7 +117,7 @@ Here are some cURL commands to test the API endpoints:
 Please note that to avoid using a database as of now, username and password are included in the code itself. Use username = "your_username" and password = "your_password" as it is.
 
 ```bash
-curl -X POST "http://localhost:5000/auth" -H "Content-Type: application/json" -d '{"username": "your_username", "password": "your_password"}'
+curl -X POST "http://localhost:5000/auth" -H "Content-Type: application/json" -d "{\"username\": \"your_username\", \"password\": \"your_password\"}"
 ```
 
 ### Fetch Country Information:
