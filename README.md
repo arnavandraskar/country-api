@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ## Authentication
 
 ### Generate API Token
-To access protected endpoints, you need to generate an API token. Now for demonstration purposes and to avoid using a database as of now use username = 'your_username' and password = 'your_password'. Use the following endpoint:
+To access protected endpoints, you need to generate an API token. Now for demonstration purposes and to avoid using a database, use username = 'your_username' and password = 'your_password' as it is. Use the following endpoint:
 
 #### Endpoint: `/auth`
 #### Method: POST
