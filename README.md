@@ -69,7 +69,7 @@ To access protected endpoints, you need to generate an API token. Now for demons
 Include the generated API token in the Authorization parameter when making requests to protected endpoints.
 
 ```bash
-curl -X GET "http://localhost:5000/country/name?name=CountryName" -H "Authorization: your_generated_token"
+curl -X GET "http://localhost:5000/country?name=CountryName" -H "Authorization: your_generated_token"
 ```
 
 ## Endpoints
@@ -78,13 +78,13 @@ curl -X GET "http://localhost:5000/country/name?name=CountryName" -H "Authorizat
     Method: POST
     Generate an API token by providing valid credentials. It expects .json in url body which has username and password values as mentioned in the Authenticate section.
 
-### `/country/name` Endpoint
+### `/country` Endpoint
     Method: GET
     Fetch detailed information about a specific country by providing its name.
 
-### `/countries` Endpoint
+### `/countries_list` Endpoint
     Method: GET
-    Retrieve a list of countries based on filters and sorting criteria.
+    Retrieve a list of countries' names based on filters and sorting criteria.
 
 #### Filters, Sorting and pagination
 #### Sorting:
@@ -122,12 +122,12 @@ curl -X POST "http://localhost:5000/auth" -H "Content-Type: application/json" -d
 
 ### Fetch Country Information:
 ```bash
-curl -X GET "http://localhost:5000/country/name?name=CountryName" -H "Authorization: your_generated_token"
+curl -X GET "http://localhost:5000/country?name=CountryName" -H "Authorization: your_generated_token"
 ```
 
-### Retrieve List of Countries:
+### Retrieve List of Countries' names:
 ```bash
-curl -X GET "http://localhost:5000/countries?page=1&items_per_page=10" -H "Authorization: your_generated_token"
+curl -X GET "http://localhost:5000/countries_list?page=1&items_per_page=10" -H "Authorization: your_generated_token"
 ```
 
 Feel free to modify the parameters based on your testing needs.
