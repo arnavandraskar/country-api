@@ -49,7 +49,7 @@ pip install -r requirements.txt
 ### Generate API Token
 To access protected endpoints, you need to generate an API token. Use the following endpoint:
 
-#### Endpoint: /auth
+#### Endpoint: `/auth`
 #### Method: POST
 
 #### Request:
@@ -81,45 +81,37 @@ curl -X GET "http://localhost:5000/country/name?name=CountryName" -H "Authorizat
     Generate an API token by providing valid credentials. It expects .json in url body which has username and password values as mentioned in the Authenticate section.
 
 ### `/country/name` Endpoint
-Method: GET
+    Method: GET
+    Fetch detailed information about a specific country by providing its name.
 
-Fetch detailed information about a specific country by providing its name.
+### `/countries` Endpoint
+    Method: GET
+    Retrieve a list of countries based on filters and sorting criteria.
 
-/countries Endpoint
-Method: GET
-
-Retrieve a list of countries based on filters and sorting criteria.
-
-Filters and Sorting
-Sorting:
-
-sort_by: Sort by either 'area' or 'population'.
-sort_order: Sort order, either 'asc' or 'desc'.
-Filters:
-
-min_population, max_population: Filter countries by population range.
-min_area, max_area: Filter countries by area range.
-languages: Filter countries by language.
-Pagination
-page: Page number.
-items_per_page: Number of items per page.
-Error Handling
+#### Filters, Sorting and pagination
+#### Sorting:
+    sort_by: Sort by either 'area' or 'population'.
+    sort_order: Sort order, either 'asc' or 'desc'.
+    
+#### Filters:
+    min_population, max_population: Filter countries by population range.
+    min_area, max_area: Filter countries by area range.
+    languages: Filter countries by language.
+    
+#### Pagination:
+    page: Page number.
+    items_per_page: Number of items per page.
+    
+## Error Handling
 In case of errors, the API provides detailed error messages, including the type and traceback.
 
-Run the Service
+## Run the Service
 Run the Flask application:
 
-bash
-Copy code
+```bash
 python app.py
-Using Docker
-Alternatively, you can use Docker to run the service:
+```
 
-bash
-Copy code
-docker build -t countryinfo-api .
-docker run -p 5000:5000 countryinfo-api
-Visit http://localhost:5000 in your browser or use a tool like curl or Postman to interact with the API.
 
 Testing with cURL
 Here are some cURL commands to test the API endpoints:
