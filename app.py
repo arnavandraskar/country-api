@@ -75,7 +75,7 @@ def get_country_info():
 
         # RESTCountriesAPI API call
         try:
-            response = requests.get(url=f"https://restcountries.com/v3.1/nam/{name}?fullText=true")
+            response = requests.get(url=f"https://restcountries.com/v3.1/name/{name}?fullText=true")
             response = response.json()
         except:
             raise SystemError("Internal API Error")
