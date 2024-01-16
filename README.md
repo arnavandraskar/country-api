@@ -32,7 +32,7 @@ Welcome to the Country API service! This backend service provides information ab
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/countryinfo-api.git
+git clone https://github.com/arnavandraskar/country-api.git
 cd country-api
 ```
 
