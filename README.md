@@ -35,6 +35,7 @@ Welcome to the Country API service! This backend service provides information ab
 ```bash
 git clone https://github.com/your-username/countryinfo-api.git
 cd country-api
+```
 
 2. Install dependencies:
 
@@ -58,7 +59,7 @@ To access protected endpoints, you need to generate an API token. Now for demons
 }
 ```
 
-####Response:
+#### Response:
 ```json
 {
     "token": "your_generated_token"
