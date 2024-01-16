@@ -1,6 +1,6 @@
 # Country API Service
 
-Welcome to the Country API service! This backend service provides information about countries, including details about specific countries and a list of countries based on various filters. The service is built using Python and Flask.
+Welcome to the Country API service! This backend service provides information about countries, including details about specific countries and a list of countries' names based on various filters. The service is built using Python and Flask.
 
 ## Table of Contents
 
