@@ -1,6 +1,6 @@
-# CountryInfo API Service
+# Country API Service
 
-Welcome to the CountryInfo API service! This backend service provides information about countries, including details about specific countries and a list of countries based on various filters. The service is built using Python and Flask.
+Welcome to the Country API service! This backend service provides information about countries, including details about specific countries and a list of countries based on various filters. The service is built using Python and Flask.
 
 ## Table of Contents
 
@@ -15,11 +15,9 @@ Welcome to the CountryInfo API service! This backend service provides informatio
     - [`/country/name`](#countryname-endpoint)
     - [`/countries`](#countries-endpoint)
 4. [Filters and Sorting](#filters-and-sorting)
-5. [Pagination](#pagination)
-6. [Error Handling](#error-handling)
-7. [Run the Service](#run-the-service)
-    - [Using Docker](#using-docker)
-8. [Testing with cURL](#testing-with-curl)
+5. [Error Handling](#error-handling)
+6. [Run the Service](#run-the-service)
+7. [Testing with cURL](#testing-with-curl)
 
 
 ## Getting Started
@@ -36,7 +34,7 @@ Welcome to the CountryInfo API service! This backend service provides informatio
 
 ```bash
 git clone https://github.com/your-username/countryinfo-api.git
-cd countryinfo-api
+cd country-api
 
 2. Install dependencies:
 
@@ -47,7 +45,7 @@ pip install -r requirements.txt
 ## Authentication
 
 ### Generate API Token
-To access protected endpoints, you need to generate an API token. Use the following endpoint:
+To access protected endpoints, you need to generate an API token. Now for demonstration purposes and to avoid using a database as of now use username = 'your_username' and password = 'your_password'. Use the following endpoint:
 
 #### Endpoint: `/auth`
 #### Method: POST
@@ -112,20 +110,22 @@ Run the Flask application:
 python app.py
 ```
 
-
-Testing with cURL
+## Testing with cURL
 Here are some cURL commands to test the API endpoints:
 
-Generate API Token:
-bash
-Copy code
+### Generate API Token:
+```bash
 curl -X POST "http://localhost:5000/auth" -H "Content-Type: application/json" -d '{"username": "your_username", "password": "your_password"}'
-Fetch Country Information:
-bash
-Copy code
+```
+
+### Fetch Country Information:
+```bash
 curl -X GET "http://localhost:5000/country/name?name=CountryName" -H "Authorization: your_generated_token"
-Retrieve List of Countries:
-bash
-Copy code
+```
+
+### Retrieve List of Countries:
+```bash
 curl -X GET "http://localhost:5000/countries?page=1&items_per_page=10" -H "Authorization: your_generated_token"
+```
+
 Feel free to modify the parameters based on your testing needs.
