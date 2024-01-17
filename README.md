@@ -122,12 +122,12 @@ curl -X POST "http://localhost:5000/auth" -H "Content-Type: application/json" -d
 
 ### Fetch Country Information:
 ```bash
-curl -X GET "http://localhost:5000/country?name=CountryName" -H "Authorization: your_generated_token"
+curl -X GET "http://localhost:5000/country?name=India" -H "Authorization: your_username:your_password"
 ```
 
 ### Retrieve List of Countries' names:
 ```bash
-curl -X GET "http://localhost:5000/countries_list?page=1&items_per_page=10" -H "Authorization: your_generated_token"
+curl -X GET "http://localhost:5000/countries_list?languages=Spanish&page=2&sort_by=population&sort_order=desc&items_per_page=10" -H "Authorization: your_username:your_password"
 ```
 
 Feel free to modify the parameters based on your testing needs.
