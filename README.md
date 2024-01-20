@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ## Authentication
 
 ### Generate API Token
-To access protected endpoints, you need to generate an API token. Now for demonstration purposes and to avoid using a database, use username = 'your_username' and password = 'your_password' as it is. Use the following endpoint:
+To access protected endpoints, you need to generate an API token. Now for demonstration purposes and to avoid using a database, use *username = 'your_username' and password = 'your_password'* as it is. Use the following endpoint:
 
 #### Endpoint: `/auth`
 #### Method: POST
@@ -118,18 +118,20 @@ python app.py
 Here are some cURL commands to test the API endpoints:
 
 ### Generate API Token:
-Please note that to avoid using a database as of now, username and password are included in the code itself. Use username = "your_username" and password = "your_password" as it is.
+Please note that to avoid using a database as of now, username and password are included in the code itself. Use *username = "your_username" and password = "your_password"*  as it is.
 
 ```bash
 curl -X POST "http://localhost:5000/auth" -H "Content-Type: application/json" -d "{\"username\": \"your_username\", \"password\": \"your_password\"}"
 ```
 
 ### Fetch Country Information:
+
 ```bash
 curl -X GET "http://localhost:5000/country?name=India" -H "Authorization: your_username:your_password"
 ```
 
 ### Retrieve List of Countries' names:
+
 ```bash
 curl -X GET "http://localhost:5000/countries_list?languages=Spanish&page=2&sort_by=population&sort_order=desc&items_per_page=10" -H "Authorization: your_username:your_password"
 ```
