@@ -74,31 +74,35 @@ curl -X GET "http://localhost:5000/country?name=India" -H "Authorization: your_g
 
 ## Endpoints
 
-### `/auth` Endpoint
-    Method: POST
-    Generate an API token by providing valid credentials. It expects .json in url body which has username and password values as mentioned in the Authenticate section.
+1. `/auth` 
+   
+    **Method: POST**
+    > Generate an API token by providing valid credentials. It expects .json in url body which has username and password values as mentioned in the Authenticate section.
 
-### `/country` Endpoint
-    Method: GET
-    Fetch detailed information about a specific country by providing its name.
+2. `/country` 
+   
+    **Method: GET**
+    > Fetch detailed information about a specific country by providing its name.
 
-### `/countries_list` Endpoint
-    Method: GET
-    Retrieve a list of countries' names based on filters and sorting criteria.
+3. `/countries_list` 
+   
+    **Method: GET**
+    > Retrieve a list of countries' names based on filters and sorting criteria.
 
-#### Filters, Sorting and pagination
-#### Sorting:
-    sort_by: Sort by either 'area' or 'population'.
-    sort_order: Sort order, either 'asc' or 'desc'.
+**Filters, Sorting and pagination**
+
+*Sorting:*
+- sort_by: Sort by either 'area' or 'population'.
+- sort_order: Sort order, either 'asc' or 'desc'.
     
-#### Filters:
-    min_population, max_population: Filter countries by population range.
-    min_area, max_area: Filter countries by area range.
-    languages: Filter countries by language.
+*Filters:*
+- min_population, max_population: Filter countries by population range.
+- min_area, max_area: Filter countries by area range.
+- languages: Filter countries by language.
     
-#### Pagination:
-    page: Page number.
-    items_per_page: Number of items per page.
+*Pagination:*
+- page: Page number.
+- items_per_page: Number of items per page.
     
 ## Error Handling
 In case of errors, the API provides detailed error messages, including the type and traceback.
