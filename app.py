@@ -20,9 +20,9 @@ def error_handler(f):
         except Exception as e:
             return jsonify(
                 {
-                    "error": str(e),
+                    "message": str(e),
                     "error_type": type(e).__name__,
-                    "error_traceback": str(traceback.format_exc()) if type(e).__name__ != "SystemError" else None
+                    "traceback": str(traceback.format_exc()) if type(e).__name__ != "SystemError" else None
                 }
             )
 
