@@ -74,17 +74,17 @@ curl -X GET "http://localhost:5000/country?name=India" -H "Authorization: your_g
 
 ## Endpoints
 
-### 1. `/auth` 
+### `/auth` 
    
 **Method: POST**
 > Generate an API token by providing valid credentials. It expects .json in url body which has username and password values as mentioned in the Authenticate section.
 
-### 2. `/country` 
+### `/country` 
    
 **Method: GET**
 > Fetch detailed information about a specific country by providing its name.
 
-### 3. `/countries_list` 
+### `/countries_list` 
    
 **Method: GET**
 > Retrieve a list of countries' names based on filters and sorting criteria.
